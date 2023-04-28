@@ -13,7 +13,11 @@
     max-width: 100%;
 }
 
-.meme-generator img {
+.image {
+    flex: 1;
+}
+.image img {
+    max-width: 100%;
     height: 400px;
     object-fit: cover;
     margin: 10px 0;
@@ -46,4 +50,11 @@
 }
 .corner a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 737px) {
+    .image img {
+        max-width: 80%;
+        height: auto;
+    }
 }

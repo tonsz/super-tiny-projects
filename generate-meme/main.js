@@ -1,5 +1,5 @@
 const generateMemeBtn = document.querySelector(".meme-generator .meme-generator-btn")
-const memeImage = document.querySelector(".meme-generator img")
+const memeImage = document.querySelector(".meme-generator .image img")
 const memeTitle = document.querySelector(".meme-generator h2")
 const memeAuthor = document.querySelector(".meme-generator .meme-author")
 
