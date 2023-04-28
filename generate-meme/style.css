@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 .meme-generator {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:'Inter', sans-serif;
     box-sizing: border-box;
     margin: 0;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     color: #333;
+    max-width: 100%;
 }
 
 .meme-generator img {
@@ -15,7 +21,8 @@
 .meme-generator-btn {
     background-color: white;
     padding: 15px 30px;
-    border: 2px solid #5ca0aa;
+    border: 1px solid #5ca0aa;
+    border-radius: 10px;
     margin: 20px;
     cursor: pointer;
     font-size: 16px; 
