@@ -13,7 +13,7 @@ Click [here](https://tonsz.github.io/happy_pract/) to start.
 
 Chat me up for any feedback :D
 
-[Twitter](https://twitter.com/mistletoni)
-[LinkedIn](https://tonsz.github.io/happy_pract/)
-[Mail](mailto:tmestrera@gmail.com)
+- [Twitter](https://twitter.com/mistletoni)
+- [LinkedIn](https://www.linkedin.com/in/tmbechayda/)
+- [Mail](mailto:tmestrera@gmail.com)
 
