@@ -61,6 +61,20 @@
     border-bottom: 1px solid #333;
     text-align: center;
 }
+
+.score-board {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .corner {
     position: fixed;
     bottom: 20px;
