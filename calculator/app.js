@@ -1,50 +1,122 @@
-const equationDisplay = document.getElementById("equation")
-const answerDisplay = document.getElementById("answer")
-const addButton = document.getElementById("add")
-const subtractButton = document.getElementById("subtract")
-const multiplyButton = document.getElementById("multiply")
-const divideButton = document.getElementById("divide")
-
-
-
 const numDisplay = document.querySelector(".num-row")
 const digits = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 let n = 0;
+// render numpad 
 for (let i=1; i<4; i++) {
     numDisplay.innerHTML += `<div class="row" id="row-${i}"></div>`
     for (let j=1; j<5; j++){
         if (digits[n] !== undefined) {
-            document.getElementById(`row-${i}`).innerHTML += `<button id="${digits[n]}"><h4>${digits[n]}</h4></button>` 
+            document.getElementById(`row-${i}`).innerHTML += `<button>${digits[n]}</button>` 
         } else {
             document.getElementById(`row-${i}`).innerHTML += 
-            `<button id="erase"><h4>C</h4></button><button id="equals"><h4>=</h4></button>` 
+            `<button id='erase'>C</button><button id='equals'>&equals;</button>` 
             break;
         }
         n++
     }
 }
 
-const numbers = document.querySelectorAll(".num-row .row button")
-let equationText = '';
+let runningTotal = 0
+let buffer = "0"
+let previousOperator; 
 
-numbers.forEach(numbers => numbers.addEventListener("click", (e) => {
-    if(equationDisplay.innerHTML && answerDisplay == '0') {
-        equationText = e.target.id
+const screen = document.getElementById("answer")
+
+// do separate things if the button clicked is a number or a symbol
+// NaN - not a number 
+function handleClick(value) {
+    if(isNaN(value)) {
+        handleSymbol(value)
     } else {
-        equationText += e.target.id
+        handleNumber(value)
+    }
+    // show entered number on the screen
+    screen.innerText = buffer
+}
 
+function handleSymbol(symbol) {
+    // do these if the input is not a number
+    switch(symbol) {
+        case 'C':
+            // reset variables
+            buffer = '0';
+            runningTotal = 0;
+            break;
+        case '=': 
+            // if there is no previous operator clicked, 
+            // do nothing, wait for another button to be clicked            
+            if(previousOperator === null) {
+                return
+            }
+            // do the operation 
+            flushOperation(parseInt(buffer))
+            previousOperator = null;
+            buffer = runningTotal;
+            runningTotal = 0;
+            break;
+        case '+':
+        case '−':
+        case '×':
+        case '÷':
+            handleMath(symbol)
+            break;
+    }
+}
+
+function handleMath(symbol) {
+    // if there is no value in the buffer (the first value)
+    // do nothing, wait for another button to be clicked
+    if (buffer === 0) {
+        return
+    } 
+
+    // parseInt - conver string type to int
+    const intBuffer = parseInt(buffer)
+ 
+    // if total is still 0, no operation performed yet
+    if (runningTotal === 0) {
+        // assign buffer to Total 
+        runningTotal = intBuffer
+    } else {
+        // perform operation with previously clicked operator
+        flushOperation(intBuffer)
     }
 
-    
-    equationDisplay.innerHTML = equationText;
-    answerDisplay.innerHTML = equationText;
-}))
+    // symbol becomes previous operator
+    previousOperator = symbol
 
-// problems: 0 placeholder digit at first.
-// possible solution: treat the value of innerHTMLs as numbers and not digits, if it is 0
-// as a calculator user, i want to see the numbers im choosing on the screen.
+    // back to 0, to wait for a new number to be typed
+    buffer = '0'
+}
 
-const add = (a, b) => { return a + b; }
-const subtract = (a, b) => { return a - b; }
-const multiply = (a, b) => { return a * b; }
-const divide = (a, b) => { return a / b; }
+function flushOperation(intBuffer) {
+    if(previousOperator === '+') {
+        runningTotal += intBuffer
+    } else if(previousOperator === '−') {
+        runningTotal -= intBuffer
+    }
+    if(previousOperator === '×') {
+        runningTotal *= intBuffer
+    }
+    if(previousOperator === '÷') {
+        runningTotal /= intBuffer
+    }
+}
+
+function handleNumber(numberString) {
+    if(buffer === '0') {
+        buffer = numberString
+    } else {
+        buffer += numberString
+    }
+
+}
+
+function init() {
+    const buttons = document.querySelectorAll(".calculator button")
+    buttons.forEach(buttons => buttons.addEventListener("click", (e) => {
+        handleClick(e.target.innerText)
+    }))
+}
+
+init();
