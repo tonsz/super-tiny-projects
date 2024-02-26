@@ -1,9 +1,8 @@
-$("#btn").click(function () {
-  $.get(
-    "http://www.boredapi.com/api/activity?participants=1",
-    function (response) {
+jQuery(function () {
+  $("#btn").click(function () {
+    $.get("http://www.boredapi.com/api/activity", function (response) {
       console.log(response);
-      document.getElementById("foo").innerHTML = response.activity;
-    }
-  );
+      document.getElementById("activity").innerHTML = response.activity;
+    });
+  });
 });

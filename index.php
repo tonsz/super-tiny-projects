@@ -12,8 +12,12 @@
     <title>Study</title>
 </head>
 <body>
-    <div id="foo"></div>
+    <div class="container">
+        <div class="text-display">
+            <p id="activity"></p>
+        </div>
         <button type="button" id="btn">New Activity</button>
+    </div>
 </body>
 <script type="text/javascript" src="scripts.js"></script>
 </html>
