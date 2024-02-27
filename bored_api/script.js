@@ -4,5 +4,6 @@ jQuery(function () {
       console.log(response);
       document.getElementById("activity").innerHTML = response.activity;
     });
+    $(".fade").fadeOut();
   });
 });
