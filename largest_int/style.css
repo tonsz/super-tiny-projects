@@ -1,36 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-
-* {
-  box-sizing: border-box;
-  font-family: "Fira Code", serif;
-}
-
-html {
-  padding: 0;
-  margin: 0;
-}
 .container,
 .text-boxes {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-#btn {
-  margin: 30px;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 6px 16px;
-  border-radius: 6px;
-  background-color: #fafbfc;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-}
-
-#btn:hover {
-  background-color: #f3f4f6;
-  text-decoration: none;
-  transition-duration: 0.1s;
 }
