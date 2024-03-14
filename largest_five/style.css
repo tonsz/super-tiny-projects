@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.num-boxes {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+.num-boxes input {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 24px;
+}

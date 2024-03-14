@@ -3,28 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign of Product of 3</title>
+    <title>Largest Int</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../assets/css/theme.css" />
   </head>
   <body>
     <div class="container">
-      <div class="text-boxes">
-        <div class="numA">
-          <p>A</p>
-          <input type="number" id="numA" />
-        </div>
-        <div class="numB">
-          <p>B</p>
-          <input type="number" id="numB" />
-        </div>
-        <div class="numC">
-          <p>C</p>
-          <input type="number" id="numC" />
-        </div>
+      <h2>Enter 5 numbers</h2>
+      <div class="num-boxes">
+        <input type="text" id="numA" inputmode="numeric" />
+        <input type="text" id="numB" inputmode="numeric" />
+        <input type="text" id="numC" inputmode="numeric" />
+        <input type="text" id="numD" inputmode="numeric" />
+        <input type="text" id="numE" inputmode="numeric" />
       </div>
-      <button type="button" id="btn">Check sign</button>
-      <h1>The sign of the product is <span id="result"></span></h1>
+      <button type="button" id="btn">Find the largest number</button>
+      <h1><span id="result"></span> is the largest number</h1>
+
       <div class="corner">
         <h2><a href="../">🪐</a></h2>
       </div>
