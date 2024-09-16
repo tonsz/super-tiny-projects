@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondrian Project</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .frame {
+        background-color: #000;
+        display: grid;
+        grid-template-columns: 320px 198px 153px 50px;
+        grid-template-rows: 414px 130px 155px 22px;
+        width: 748px;
+        height: 748px;
+        gap: 9px;
+      }
+      .item {
+        background-color: #f0f1ec;
+      }
+      .red {
+        background-color: #e72f24;
+      }
+      .two {
+        grid-column: 2 / 5;
+      }
+      .three {
+        grid-area: 2 / 1 / 4 / 2;
+      }
+      .four {
+        grid-area: 2 / 2 / 4 / 4;
+      }
+      .blue {
+        background-color: #004592;
+      }
+      .bottom-right {
+        border-top: 10px solid black;
+        grid-area: 3 / 4 / 5 / 5;
+      }
+      .bottom-left {
+        order: 1;
+      }
+      .yellow {
+        background-color: #f9d01e;
+        order: 2;
+      }
+      .black {
+        background-color: #232629;
+        order: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="frame">
+        <div class="item red"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item four"></div>
+        <div class="item blue"></div>
+        <div class="item bottom-right"></div>
+        <div class="item yellow"></div>
+        <div class="item black"></div>
+        <div class="item bottom-left"></div>
+      </div>
+    </div>
+  </body>
+</html>
