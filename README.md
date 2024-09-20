@@ -1,17 +1,16 @@
-# super tiny projects
+# silly, tiny, web apps
 
-This is home to all my silly and micro endeavours on the programming language of Javascript. It is in preparation to becoming better in writing programs on the said language. For now there is absolutely no standard whatsoever except the fact that me and my gf have fun in testing all this code, but I am currently working on reading the book Clean Code side by side with this project. 
+This is home to small (very) web dev projects I did to either practice or in completion of a course. For now there is absolutely no standard whatsoever except the fact I make my gf try some of these and we have our fun.
 
+## repository structure
 
-## Usage
+Every branch is a new set of a project that can be deployed on GitHub pages. I am still too lazy to organize them in one branch...
 
-Every subdirectory is a micro project and the root just holds a simple navigation index for these projects. I may make new branches if I want to display something new in the demo link. 
+## currently live: the simon game
 
-Click [here](https://tonsz.github.io/super-tiny-projects/) to start.
+### Click [here](https://tonsz.github.io/super-tiny-projects/) to play :3
 
-## Contact
-
-Chat me up for any feedback :D
+## reach out!
 
 - [LinkedIn](https://www.linkedin.com/in/tmbechayda/)
 - [Mail](mailto:tmestrera@gmail.com)
