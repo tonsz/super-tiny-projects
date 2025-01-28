@@ -6,9 +6,11 @@ This is home to small (very) web dev projects I did to either practice or in com
 
 Every branch is a new set of a project that can be deployed on GitHub pages. I am still too lazy to organize them in one branch...
 
-## currently live: the simon game
+## currently live: a timer design
 
-### Click [here](https://tonsz.github.io/super-tiny-projects/) to play :3
+*For the first time in forever, the `timer` branch/demo also has [its own sort of write-up](https://tonsz.bearblog.dev/timer-project/) for the resources.*
+
+### Click [here](https://tonsz.github.io/super-tiny-projects/) for the demo :3
 
 ## reach out!
 
